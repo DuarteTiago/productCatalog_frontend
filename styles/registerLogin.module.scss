@@ -1,0 +1,82 @@
+@import "./colors.module.scss";
+
+.gridContainer {
+  flex: 1 0 auto;
+  padding: 80px 0;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom, $lightGray, $mediumGray);
+}
+.formSalutation {
+  color: $darkBlack;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.formTitle {
+  font-size: 25px;
+  color: $darkBlack;
+}
+.form {
+  width: 600px;
+  border-radius: 4px;
+  padding: 50px;
+  border: 1px solid $darkGray;
+  margin: 0 auto;
+}
+.label {
+  color: $darkBlack;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+.input {
+  border-color: $darkGray;
+  &:focus {
+    box-shadow: none;
+    border-color: $lightGray;
+  }
+}
+.inputName {
+  @extend .input;
+  text-transform: uppercase;
+  &::placeholder {
+    text-transform: none;
+  }
+}
+.formBtn {
+  display: block;
+  margin: 50px auto 0 auto;
+  border-color: $darkBlack;
+  color: $darkBlack;
+  &:hover {
+    background-color: transparent;
+    color: $lightRed;
+    border-color: $lightRed;
+  }
+}
+@media (max-width: 767px) {
+  .formSalutation {
+    font-size: 28px;
+  }
+  .formTitle {
+    font-size: 25px;
+  }
+
+  .form {
+    width: 95%;
+  }
+}
+@media (max-width: 570px) {
+  .form {
+    padding: 50px 10px;
+  }
+}
+@media (max-width: 290px) {
+  .formTitle {
+    font-size: 22px;
+    text-align: center;
+  }
+}

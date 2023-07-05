@@ -1,0 +1,35 @@
+@import "./colors.module.scss";
+
+.sectionTitle {
+  font-size: 25px;
+  font-weight: bold;
+  color: $darkBlack;
+  margin: 20px 30px;
+}
+.slideSectionBtn {
+  margin: 20px 30px;
+
+  color: $darkBlack;
+  border-color: $darkBlack;
+  &:hover {
+    border-color: transparent;
+    background-color: $mediumGray;
+  }
+}
+.slide {
+  height: 300px;
+  border: 3px solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: clip;
+  transition: 0.4s;
+
+  &:hover {
+    border-color: $lightGray;
+  }
+}
+.slideImg {
+  width: 100%;
+  height: 300px;
+}

@@ -1,0 +1,72 @@
+@import "./colors.module.scss";
+
+.pageProduct {
+  display: flex;
+  padding: 40px 40px;
+  background-image: linear-gradient(to bottom, $lightGray, $mediumGray);
+}
+
+.productImg {
+  width: 90%;
+  height: 70%;
+  border-radius: 5px;
+}
+.productInfo {
+  margin-left: 30px;
+}
+.productName {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: $darkBlack;
+}
+.productDescription {
+  color: $darkGray;
+  margin-bottom: 10px;
+}
+.productCode {
+  font-size: 14px;
+  color: $darkBlack;
+  margin-bottom: 30px;
+}
+.productPrice {
+  color: $darkBlack;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+.interations {
+  display: flex;
+  margin-left: 30px;
+}
+.cardBtn {
+  color: $darkGray;
+  background-color: transparent;
+  border-color: $darkGray;
+  &:hover {
+    background-color: $mediumGray;
+    border-color: $mediumGray;
+    color: $darkGray;
+  }
+}
+.likeIcon {
+  width: 30px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .pageProduct {
+    flex-direction: column;
+    align-items: center;
+  }
+  .productImg {
+    width: 100%;
+    height: 70%;
+    border-radius: 5px;
+  }
+  .productInfo {
+    margin-left: 0px;
+  }
+  .productName {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,73 @@
+@import "../../../../styles/colors.module.scss";
+.cards {
+  width: 300px;
+  height: 100%;
+}
+
+.card {
+  border-radius: 1rem;
+  border-color: transparent;
+  margin: 5px 5px;
+  background-color: transparent;
+  overflow: hidden;
+  text-overflow: clip;
+}
+.imgCard {
+  width: 300px;
+  height: 350px;
+  border-radius: 0.3rem;
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.cardTitle {
+  color: $darkGray;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px 0px;
+}
+.cardPrice {
+  font-size: 18px;
+  color: $darkGray;
+  margin: 0px 0px 20px;
+}
+.interations {
+  margin-bottom: 20px;
+}
+.likeIcon {
+  width: 25px;
+  margin-left: 100px;
+  cursor: pointer;
+}
+.cardBtn {
+  color: $darkGray;
+  background-color: transparent;
+  border-color: $darkGray;
+  &:hover {
+    background-color: $mediumGray;
+    border-color: $mediumGray;
+    color: $darkGray;
+  }
+}
+.modalImg {
+  width: 80%;
+}
+.modalCard {
+  justify-content: center;
+  max-width: 50%;
+}
+
+@media (max-width: 600px) {
+  .modalImg {
+    width: 90%;
+  }
+}
+@media (max-width: 340px) {
+  .cards {
+    width: 100%;
+  }
+  .imgCard {
+    width: 100%;
+  }
+}

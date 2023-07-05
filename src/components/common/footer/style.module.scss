@@ -1,0 +1,29 @@
+@import "../../../../styles/colors.module.scss";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0px;
+  background-color: white;
+}
+.footerDev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 0px;
+}
+.footerLogo {
+  width: 150px;
+}
+.footerLink {
+  color: $darkBlack;
+  text-decoration: none;
+}
+.footerLinkDev {
+  color: $darkBlack;
+  font-size: 12px;
+  text-decoration: none;
+}

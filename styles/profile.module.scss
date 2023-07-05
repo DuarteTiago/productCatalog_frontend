@@ -1,0 +1,151 @@
+@import "./colors.module.scss";
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.gridContainer {
+  flex: 1 0 auto;
+  padding: 80px 0;
+}
+.form {
+  border: 1px solid $darkGray;
+  border-radius: 5px;
+  padding: 20px 0px;
+  max-width: 100%;
+}
+.formName {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 80%;
+  margin: 20px auto;
+  text-transform: uppercase;
+}
+.shortName {
+  font-size: 40px;
+  font-weight: bold;
+  min-height: 70px;
+  min-width: 70px;
+  background-color: white;
+  color: $darkGray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userName {
+  color: $darkGray;
+  font-size: 30px;
+  font-weight: bold;
+}
+.label {
+  font-size: 14px;
+  font-weight: bold;
+  color: $darkGray;
+}
+.inputFlexDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+.inputFlex {
+  width: 250px;
+  text-transform: uppercase;
+  background-color: white;
+  border: 1px solid $darkGray;
+  &::placeholder {
+    color: $lightGray;
+  }
+  &:focus {
+    border-color: $lightGray;
+    box-shadow: none;
+  }
+}
+.inputNormalDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+.input {
+  @extend .inputFlex;
+  text-transform: lowercase;
+  width: 550px;
+}
+.formBtn {
+  display: block;
+  margin: 50px auto 0 auto;
+  border-color: $darkBlack;
+  color: $darkBlack;
+  font-size: 15px;
+  &:hover {
+    background-color: transparent;
+    color: $lightRed;
+    border-color: $lightRed;
+  }
+}
+.title {
+  color: $darkGray;
+  font-size: 45px;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+.renderForm {
+  display: block;
+  width: 200px;
+  border: 1px solid $darkGray;
+  color: $darkGray;
+  background-color: transparent;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px 0px;
+  &:hover {
+    background-color: $darkGray;
+  }
+  &:active {
+    background-color: transparent;
+  }
+  &:focus {
+    background-color: transparent;
+    box-shadow: none;
+    color: $darkBlack;
+    border-color: $darkBlack;
+  }
+}
+
+@media (max-width: 991px) {
+  .title {
+    text-align: center;
+  }
+  .btnColumn {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .inputFlexDiv {
+    gap: 20px;
+  }
+  .inputFlex {
+    width: 400px;
+  }
+}
+@media (max-width: 460px) {
+  .title {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .shortName {
+    font-size: 30px;
+    min-width: 60px;
+    min-height: 60px;
+  }
+  .userName {
+    font-size: 25px;
+  }
+  .inputFlex {
+    width: 100%;
+  }
+}

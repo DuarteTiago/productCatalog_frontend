@@ -1,0 +1,36 @@
+@import "../../../../styles/colors.module.scss";
+
+.header {
+  background-color: white;
+}
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 0px;
+}
+.headerLogo {
+  width: 200px;
+  cursor: pointer;
+}
+.headerBtn {
+  background-color: transparent;
+  border-color: $mediumGray;
+  color: $mediumGray;
+  margin-top: 20px;
+  &:hover {
+    border-color: $darkGray;
+    color: $darkGray;
+    background-color: transparent;
+  }
+}
+@media (max-width: 576px) {
+  .headerBtn {
+    margin: 20px;
+  }
+}
+@media (max-width: 345px) {
+  .headerContainer {
+    justify-content: center;
+  }
+}
