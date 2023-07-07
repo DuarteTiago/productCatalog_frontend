@@ -10,6 +10,7 @@ import { Button, Col, Container } from "reactstrap";
 
 import Footer from "@/src/components/common/footer";
 import PageSpinner from "@/src/components/common/spinner";
+import Link from "next/link";
 
 const ProductPage = () => {
   const router = useRouter();
@@ -83,7 +84,12 @@ const ProductPage = () => {
               <p className={styles.productPrice}>R$: {product?.productPrice}</p>
             </div>
             <div className={styles.interations}>
-              <Button className={styles.cardBtn}>Comprar</Button>
+              <Link
+                href={`https://api.whatsapp.com/send?phone=5548984589424&text=Olá! Gostaria de saber mais sobre o produto (${product.name}) de código: ${product.productCode}`}
+              >
+                <Button className={styles.cardBtn}>Comprar</Button>
+              </Link>
+
               {favorited === false ? (
                 <img
                   className={styles.likeIcon}

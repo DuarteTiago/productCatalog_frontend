@@ -30,7 +30,7 @@ const NewCard = ({ product }: props) => {
 
               <div className={styles.interations}>
                 <Link
-                  href={`https://api.whatsapp.com/send?phone=5548984589424&text=Olá! Gostaria de saber mais sobre o produto (${product.name})  de código: ${product.productCode}`}
+                  href={`https://api.whatsapp.com/send?phone=5548984589424&text=Olá! Gostaria de saber mais sobre o produto (${product.name}) de código: ${product.productCode}`}
                 >
                   <Button className={styles.cardBtn}>Comprar</Button>
                 </Link>
