@@ -15,10 +15,26 @@ const productService = {
     });
     return res;
   },
+
   getProduct: async (id: number | string) => {
-    const res = await api.get(`/products/${id}`).catch((error) => {
-      return error.response;
-    });
+    const res = await api
+      .get(`/products/${id}`)
+
+      .catch((error) => {
+        return error.response;
+      });
+    return res;
+  },
+
+  getProductAuth: async (id: number | string) => {
+    const token = sessionStorage.getItem("G&M-token");
+    const res = await api
+      .get(`/products/auth/${id}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .catch((error) => {
+        return error.response;
+      });
     return res;
   },
   getAllProducts: async () => {

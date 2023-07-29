@@ -31,7 +31,7 @@ const ProductPage = () => {
   const getProduct = async () => {
     if (typeof id !== "string") return;
 
-    const res = await productService.getProduct(id);
+    const res = await productService.getProductAuth(id);
 
     if (res.status === 200) {
       setProduct(res.data);
@@ -80,7 +80,9 @@ const ProductPage = () => {
               <p className={styles.productDescription}>
                 {product?.description}
               </p>
-              <p className={styles.productCode}>Cod: {product?.productCode}</p>
+              <p className={styles.productCode}>
+                código: {product?.productCode}
+              </p>
               <p className={styles.productPrice}>R$: {product?.productPrice}</p>
             </div>
             <div className={styles.interations}>
